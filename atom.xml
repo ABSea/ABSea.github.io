@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-13T13:45:00.000Z</updated>
+  <updated>2016-02-13T15:11:22.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2015/11/07/mac%E5%AE%89%E8%A3%85nodejs/"/>
     <id>http://yoursite.com/2015/11/07/mac安装nodejs/</id>
     <published>2015-11-07T14:44:12.000Z</published>
-    <updated>2016-02-13T13:45:00.000Z</updated>
+    <updated>2016-02-13T15:11:22.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;Mac__u5B89_u88C5nodejs&quot;&gt;&lt;a href=&quot;#Mac__u5B89_u88C5nodejs&quot; class=&quot;headerlink&quot; title=&quot;Mac 安装nodejs&quot;&gt;&lt;/a&gt;Mac 安装nodejs&lt;/h1&gt;&lt;p&gt;这几日因为需求需要又临时用到nodejs，之前安装过好几次，但是每次还是忍不住百度下，所以这次在此mark下 Mac 下 nodejs 的安装和检验，给自己留个标记，提高下以后的效率。&lt;/p&gt;
+    <content type="html">&lt;p&gt;这几日因为需求需要又临时用到nodejs，之前安装过好几次，但是每次还是忍不住百度下，所以这次在此mark下 Mac 下 nodejs 的安装和检验，给自己留个标记，提高下以后的效率。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&quot;step_1_uFF1A&quot;&gt;&lt;a href=&quot;#step_1_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 1：&quot;&gt;&lt;/a&gt;step 1：&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;访问nodejs官网，点击蓝色选框区域稳定版，并下载&lt;/strong&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://nodejs.org/en/&lt;/a&gt;&lt;/li&gt;
@@ -56,7 +56,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Mac__u5B89_u88C5nodejs&quot;&gt;&lt;a href=&quot;#Mac__u5B89_u88C5nodejs&quot; class=&quot;headerlink&quot; title=&quot;Mac 安装nodejs&quot;&gt;&lt;/a&gt;Mac 安装nodejs&lt;/h1&gt;&lt;p&gt;这几日因为需求需要又
+      &lt;p&gt;这几日因为需求需要又临时用到nodejs，之前安装过好几次，但是每次还是忍不住百度下，所以这次在此mark下 Mac 下 nodejs 的安装和检验，给自己留个标记，提高下以后的效率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_1_uFF1A&quot;&gt;&lt;a href=&quot;#ste
     
     </summary>
     
