@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ABSea</title>
+  <subtitle>Practice makes perfect</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-02-13T13:45:00.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>AndyChan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac安装nodejs</title>
+    <link href="http://yoursite.com/2015/11/07/mac%E5%AE%89%E8%A3%85nodejs/"/>
+    <id>http://yoursite.com/2015/11/07/mac安装nodejs/</id>
+    <published>2015-11-07T14:44:12.000Z</published>
+    <updated>2016-02-13T13:45:00.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;Mac__u5B89_u88C5nodejs&quot;&gt;&lt;a href=&quot;#Mac__u5B89_u88C5nodejs&quot; class=&quot;headerlink&quot; title=&quot;Mac 安装nodejs&quot;&gt;&lt;/a&gt;Mac 安装nodejs&lt;/h1&gt;&lt;p&gt;这几日因为需求需要又临时用到nodejs，之前安装过好几次，但是每次还是忍不住百度下，所以这次在此mark下 Mac 下 nodejs 的安装和检验，给自己留个标记，提高下以后的效率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_1_uFF1A&quot;&gt;&lt;a href=&quot;#step_1_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 1：&quot;&gt;&lt;/a&gt;step 1：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;访问nodejs官网，点击蓝色选框区域稳定版，并下载&lt;/strong&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://nodejs.org/en/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160119220635178&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_2_uFF1A&quot;&gt;&lt;a href=&quot;#step_2_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 2：&quot;&gt;&lt;/a&gt;step 2：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;双击刚下载的文件，按步骤默认安装就行&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160119213011705&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_3_uFF1A&quot;&gt;&lt;a href=&quot;#step_3_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 3：&quot;&gt;&lt;/a&gt;step 3：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;安装完成后打开终端，输入 &lt;/strong&gt;&lt;br&gt;&lt;em&gt;npm -v&lt;/em&gt;&lt;br&gt;&lt;em&gt;node  -v&lt;/em&gt;&lt;br&gt;两个命令，如下图出现版本信息，说明安装成功。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160119213637848&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_4_uFF1A&quot;&gt;&lt;a href=&quot;#step_4_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 4：&quot;&gt;&lt;/a&gt;step 4：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;新建一个js文件，nodejsTest.js , 输入下面的代码, 并保存&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; http = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;http&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;http.createServer(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;request, response&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	response.writeHead(&lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;string&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt; : &lt;span class=&quot;string&quot;&gt;&quot;text/plain&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	response.write(&lt;span class=&quot;string&quot;&gt;&quot;Welcome to Nodejs&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	response.end();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;).listen(&lt;span class=&quot;number&quot;&gt;8000&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;127.0.0.1&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&quot;Creat server on http://127.0.0.1:8000/&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;打开终端进入 nodejsTest.js  所在目录， 输入 node nodejsTest&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160119221254453&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;打开浏览器，点击或者输入&lt;a href=&quot;http://127.0.0.1:8000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://127.0.0.1:8000/&lt;/a&gt;， 如果无法打开，可以去掉.listen(8000, “127.0.0.1”) 中得ip监听改成   .listen(8000)，然后点击或者输入&lt;a href=&quot;http://localhost:8000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:8000/&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160119220606037&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Mac__u5B89_u88C5nodejs&quot;&gt;&lt;a href=&quot;#Mac__u5B89_u88C5nodejs&quot; class=&quot;headerlink&quot; title=&quot;Mac 安装nodejs&quot;&gt;&lt;/a&gt;Mac 安装nodejs&lt;/h1&gt;&lt;p&gt;这几日因为需求需要又
+    
+    </summary>
+    
+      <category term="NodeJS" scheme="http://yoursite.com/categories/NodeJS/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Mac" scheme="http://yoursite.com/tags/Mac/"/>
+    
+      <category term="NodeJS" scheme="http://yoursite.com/tags/NodeJS/"/>
+    
+      <category term="安装" scheme="http://yoursite.com/tags/%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UILabel多行自适应计算高度存在的坑</title>
+    <link href="http://yoursite.com/2015/05/07/UILabel%E5%A4%9A%E8%A1%8C%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E8%AE%A1%E7%AE%97%E9%AB%98%E5%BA%A6%E5%AD%98%E5%9C%A8%E7%9A%84%E5%9D%91/"/>
+    <id>http://yoursite.com/2015/05/07/UILabel多行高度自适应计算高度存在的坑/</id>
+    <published>2015-05-07T10:44:12.000Z</published>
+    <updated>2016-02-13T13:41:28.000Z</updated>
+    
+    <content type="html">&lt;p&gt;本文来说明[UILabel][6]在实现多行文本时，计算文本的高度存在的一个问题，因为这个问题之前遇到过很多次，特在测mark一下，给自己留个痕迹，以免后面再碰到，涉及到讨论的两种方法（这两种方法都存在这样的问题）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;NSMutableAttributedString  的 &lt;em&gt;addAttributes&lt;/em&gt; 方法&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;boundingRectWithSize&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;u95EE_u9898_u5C55_u793A_uFF1A&quot;&gt;&lt;a href=&quot;#u95EE_u9898_u5C55_u793A_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;问题展示：&quot;&gt;&lt;/a&gt;问题展示：&lt;/h2&gt;&lt;p&gt;先看下图片，展示下问题（测试条件）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;具有图片&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;单行的文字&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目前在模拟器上出现的问题，真机尚未测试&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以看出“第三个格子的文本覆盖了右上角的时间文字”，但是第四行的文字却没有，两个cell的通过肉眼就能发现是一样的高度，那么问题是什么呢。&lt;br&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160114223813373&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;u95EE_u9898_u5206_u6790_uFF1A&quot;&gt;&lt;a href=&quot;#u95EE_u9898_u5206_u6790_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;问题分析：&quot;&gt;&lt;/a&gt;问题分析：&lt;/h2&gt;&lt;p&gt;####下面说明下两种出现这种问题的方法：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一种计算高度方法&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#10;&amp;#10;----------&amp;#10;&amp;#20027;&amp;#35201;&amp;#20195;&amp;#30721;&amp;#10;------&amp;#10;&amp;#10;//NSStringDrawingUsesFontLeading &amp;#20197;&amp;#23383;&amp;#20307;&amp;#38388;&amp;#34892;&amp;#36317;&amp;#20301;&amp;#35745;&amp;#31639;&amp;#26041;&amp;#24335;&amp;#65288;&amp;#23383;&amp;#20307;&amp;#39640;&amp;#24230; + &amp;#34892;&amp;#38388;&amp;#36317;&amp;#65289;&amp;#10;//NSStringDrawingUsesLineFragmentOrigin &amp;#20197;&amp;#27599;&amp;#34892;&amp;#32452;&amp;#25104;&amp;#30340;&amp;#30697;&amp;#24418;&amp;#35745;&amp;#31639;&amp;#39640;&amp;#24230;&amp;#10;&amp;#10; - NSStringDrawingOptions Option =NSStringDrawingUsesLineFragmentOrigin&amp;#10;   | NSStringDrawingUsesFontLeading;&amp;#10;   &amp;#10;   NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]&amp;#10;   init]; [style setLineBreakMode:NSLineBreakByWordWrapping];&amp;#10;&amp;#10;    &amp;#10;NSDictionary *attributes = @&amp;#123; NSFontAttributeName : ChatContentFont, NSParagraphStyleAttributeName : style &amp;#125;;&amp;#10;&amp;#10;contentSize = [strContent boundingRectWithSize:CGSizeMake(textContentWidth, CGFLOAT_MAX) options:Option attributes: attributes context:nil].size;&amp;#10;&amp;#10;&amp;#26368;&amp;#21518;&amp;#65306;&amp;#10;labelHeight = contentSize.height;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;第二种计算高度方法&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#10;&amp;#10;----------&amp;#10;&amp;#20027;&amp;#35201;&amp;#20195;&amp;#30721;&amp;#10;------&amp;#10;&amp;#10;//NSStringDrawingUsesFontLeading &amp;#20197;&amp;#23383;&amp;#20307;&amp;#38388;&amp;#34892;&amp;#36317;&amp;#20301;&amp;#35745;&amp;#31639;&amp;#26041;&amp;#24335;&amp;#65288;&amp;#23383;&amp;#20307;&amp;#39640;&amp;#24230; + &amp;#34892;&amp;#38388;&amp;#36317;&amp;#65289;&amp;#10;//NSStringDrawingUsesLineFragmentOrigin &amp;#20197;&amp;#27599;&amp;#34892;&amp;#32452;&amp;#25104;&amp;#30340;&amp;#30697;&amp;#24418;&amp;#35745;&amp;#31639;&amp;#39640;&amp;#24230;&amp;#10;&amp;#10; - NSStringDrawingOptions Option =NSStringDrawingUsesLineFragmentOrigin&amp;#10;   | NSStringDrawingUsesFontLeading;&amp;#10;   &amp;#10;NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]&amp;#10;   init]; [style setLineBreakMode:NSLineBreakByWordWrapping];&amp;#10;&amp;#10;UILabel *labelStr = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, textContentWidth, CGFLOAT_MAX)];&amp;#10;//&amp;#35774;&amp;#32622;numberOfLine = 0 ,&amp;#34920;&amp;#31034;&amp;#22810;&amp;#34892;&amp;#26174;&amp;#31034;&amp;#10;labelStr.numberOfLines = 0;&amp;#10;            &amp;#10;NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:_message.strContent];&amp;#10;            &amp;#10;CGFloat actualTextLen = textContentWidth;&amp;#10;if (attrStr.length &amp;#60; textContentWidth) &amp;#123;          &amp;#10;&amp;#9;actualTextLen = attrStr.length;&amp;#10;&amp;#125;&amp;#10;&amp;#10;//range &amp;#21442;&amp;#25968;&amp;#34920;&amp;#31034;&amp;#20174;&amp;#23383;&amp;#31526;&amp;#20018;&amp;#30340;0&amp;#20301;&amp;#32622;&amp;#24320;&amp;#22987;&amp;#30340;actualTextLen&amp;#20010;&amp;#23383;&amp;#31526;&amp;#10;//&amp;#20026;&amp;#36825;&amp;#20010;&amp;#33539;&amp;#22260;&amp;#20869;&amp;#30340;&amp;#23383;&amp;#31526;&amp;#28155;&amp;#21152;&amp;#23545;&amp;#24212;&amp;#30340;&amp;#23646;&amp;#24615;&amp;#10;[attrStr addAttributes:attributes range:NSMakeRange(0, actualTextLen)];&amp;#10;labelStr.attributedText = attrStr;&amp;#10;[labelStr sizeToFit];&amp;#10;&amp;#10;&amp;#26368;&amp;#21518;&amp;#65306;&amp;#10;labelHeight = labelStr.frame.size.height&amp;#65307;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;23_23_23_23_u8FD9_u4E24_u79CD_u65B9_u6CD5_u90FD_u4F1A_u9020_u6210_u4E0A_u9762_u56FE_u7247_u6240_u63CF_u8FF0_u7684_u95EE_u9898_uFF1A_u5176_u6253_u5370_u51FA_u6765_u7684_u9AD8_u5EA6_u89C1_u4E0B_u56FE_uFF1A&quot;&gt;&lt;a href=&quot;#23_23_23_23_u8FD9_u4E24_u79CD_u65B9_u6CD5_u90FD_u4F1A_u9020_u6210_u4E0A_u9762_u56FE_u7247_u6240_u63CF_u8FF0_u7684_u95EE_u9898_uFF1A_u5176_u6253_u5370_u51FA_u6765_u7684_u9AD8_u5EA6_u89C1_u4E0B_u56FE_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;####这两种方法都会造成上面图片所描述的问题：其打印出来的高度见下图：&quot;&gt;&lt;/a&gt;####这两种方法都会造成上面图片所描述的问题：其打印出来的高度见下图：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160115074931409&quot; alt=&quot;注意看第五行&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上面的结果打印出来的值解释（以第五行为例）：&lt;br&gt;17.000000          —     16.707031 对应&lt;br&gt;第二种计算方法 — 第一种计算方法&lt;/p&gt;
+&lt;h2 id=&quot;u5206_u6790_u7ED3_u679C_uFF1A&quot;&gt;&lt;a href=&quot;#u5206_u6790_u7ED3_u679C_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;分析结果：&quot;&gt;&lt;/a&gt;分析结果：&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;经过测试下，这种情况只有在文字的长度小于一行时才会出现&lt;/li&gt;
+&lt;li&gt;当刚满一行时就计算成33了，如第一张图的第三个cell显示的那样&lt;/li&gt;
+&lt;li&gt;而且在简单测试时候发现只有存在图片时候会出现这样的问题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt; &lt;strong&gt;&lt;em&gt;结论&lt;/em&gt;&lt;/strong&gt;就是：在单行不满的情况下，如果“文字Label”具有背景色的时候，就会出现布局上面的问题，在table滑动的时候会出现“文字Label”背景色加高从而覆盖右上角的“时间”Label的问题。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;u89E3_u51B3_u529E_u6CD5_uFF1A&quot;&gt;&lt;a href=&quot;#u89E3_u51B3_u529E_u6CD5_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;解决办法：&quot;&gt;&lt;/a&gt;解决办法：&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;因为这样会影响用户的体验效果，所以参照log打印出来的值，第四行和第五行，同样是显示一行，一个高度是33，一个高度是17。所以问题最简单的处理方法就是在17 的基础上加上18，也就是判断高度的值，如果小于33，就加上18，如果没有就以计算的原值为最终计算的高度值， &lt;strong&gt;17 + 18 = 35&lt;/strong&gt;，多了两个高度点（这个值可以自己上下调节两三个高度点）&lt;br&gt;，然后最终的效果出来，如下图：&lt;br&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160115080626721&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;经简单测试，这样修改后，在随意的滑动table时候，“文字Label”的背景色不会出现上述的问题；&lt;/p&gt;
+&lt;p&gt;因时间关系，目前只探索到这里，后续有更好的令人信服的方法时，再更新，也欢迎有大神提出更好的方案。&lt;/p&gt;
+&lt;hr&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文来说明[UILabel][6]在实现多行文本时，计算文本的高度存在的一个问题，因为这个问题之前遇到过很多次，特在测mark一下，给自己留个痕迹，以免后面再碰到，涉及到讨论的两种方法（这两种方法都存在这样的问题）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;NSMu
+    
+    </summary>
+    
+      <category term="IOS" scheme="http://yoursite.com/categories/IOS/"/>
+    
+    
+      <category term="IOS" scheme="http://yoursite.com/tags/IOS/"/>
+    
+      <category term="UILabel" scheme="http://yoursite.com/tags/UILabel/"/>
+    
+      <category term="高度计算" scheme="http://yoursite.com/tags/%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
+  
+</feed>
