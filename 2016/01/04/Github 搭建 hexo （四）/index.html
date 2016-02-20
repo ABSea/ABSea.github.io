@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="ABSea"><title>Github 搭建 hexo （四） | ABSea</title><link rel="stylesheet" type="text/css" href="/css/normalize.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/pure-min.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Github 搭建 hexo （四）</h1><a id="logo" href="/.">ABSea</a><p class="description">Practice makes perfect</p></div><div id="nav-menu"><a href="/." class="current"><i class="icon-home"> 首页</i></a><a href="/archives/"><i class="icon-archive"> 归档</i></a><a href="/about/"><i class="icon-about"> 关于</i></a><a href="/history/"><i class="icon-history"> 历史</i></a><a href="/guestbook/"><i class="icon-guestbook"> 留言</i></a><a href="/atom.xml"><i class="icon-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post post-page"><h1 class="post-title">Github 搭建 hexo （四）</h1><div class="post-meta">2016-01-04<span class="categories"> | 分类于<a href="/categories/github-blog/"> github blog</a></span></div><span data-disqus-identifier="2016/01/04/Github 搭建 hexo （四）/" class="disqus-comment-count"></span><div class="post-content"><p>在github page 上显示hexo生成的静态博客，因为github支持的是静态博客，所以本章就在前两章的基础上，在github上显示hexo 搭建的博客。</p>
+<hr>
+<blockquote>
+<p>声明：</p>
+<ul>
+<li>hexo 默认支持disqus，所以修改起来比较简单。</li>
+</ul>
+</blockquote>
+<p>#(一)更换主题</p>
+<p>本次使用的主题是一个白色风格的<a href="https://github.com/tufu9441/maupassant-hexo/" target="_blank" rel="external">简洁主题</a>，进入这个主题后就会发现其使用方法。</p>
+<p>进入hexo 安装目录，也就是初始化的目录（hexo init  githexo）中的githexo目录，详细目录请根据自己定义的目录名字为主，</p>
+<ul>
+<li><strong><em>进入该目录后，输入下面的命令：</em></strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong><em>接下来一定要输入下面的命令，来安装这个主题的依赖环境。</em></strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-sass --save&#10;npm install hexo-renderer-jade --save</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong><em>然后就会在themes目录下多出来个主题文件夹 maupassant：</em></strong></li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160220001304735" alt="这里写图片描述"></p>
+<ul>
+<li><strong><em>然后在根目录修改根目录中的 _config.yml 如下，将theme后面的文件名修改为maupassant,具体名字还得看自己想设置什么主题了</em></strong></li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160220001617099" alt="这里写图片描述"></p>
+<p><strong><em>然后输入<code>hexo s</code> 或者 <code>hexo server</code> 就可以查看更换后的主题效果了，这里就不贴图展示了。</em></strong></p>
+<hr>
+<h2 id="23_28_u4E8C_29_u6DFB_u52A0disqus__u8BC4_u8BBA_u7CFB_u7EDF"><a href="#23_28_u4E8C_29_u6DFB_u52A0disqus__u8BC4_u8BBA_u7CFB_u7EDF" class="headerlink" title="#(二)添加disqus 评论系统"></a>#(二)添加disqus 评论系统</h2><blockquote>
+<ul>
+<li>可以用到的评论系统有挺多的，多说，disqus等，这里只mark下disqus， </li>
+<li>disqus 的添加跟主题有关，因为hexo自带disqus，所以添加起来非常简单，这里讲下默认的主题landscape 和 上面演示的主题<a href="https://github.com/tufu9441/maupassant-hexo/" target="_blank" rel="external">maupassant</a></li>
+</ul>
+</blockquote>
+<p>###Step 1：</p>
+<ul>
+<li>进入<a href="https://disqus.com/" target="_blank" rel="external">disqus官网</a>， 点击蓝色框中链接，给自己的网站添加disqus，</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160220002850413" alt="这里写图片描述"></p>
+<p>###Step 2：</p>
+<ul>
+<li>点击后，出现下图，输入网站名字。然后在第二个输入框填写自己的唯一disqus识别名称，这个名称会在后面用到，比如我这里填写的是我最常用的absea。然后点击<strong>Next</strong>按钮</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160220003146381" alt="这里写图片描述"></p>
+<p>###Step 3：</p>
+<ul>
+<li>上面点击Next后就会出现下面页面，这里面会有disqus在不同博客系统上或者其他系统上对应的代码。因为hexo自带支持disqus，所以不需要这里面的代码，这个页面的内容会在其他除hexo之外的博客系统中用到，如果是hexo搭建博客disqus，可以跳过。</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160220003532601" alt="这里写图片描述"></p>
+<p>###Step 4：</p>
+<ul>
+<li>然后在主题的配置文件，主题的配置文件，主题的配置文件，重要的说三遍，在主题的配置文件_config.yml的disqus后面添加step 2中使用的唯一的disqus识别名字。这里我使用的是absea，</li>
+</ul>
+<blockquote>
+<p>注意这里absea后面和##注释必须隔开一个空格，因为.jade文件是代码风格严格的。如果没有这个空格，那就没有disqus效果。</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20160220004055884" alt="这里写图片描述"></p>
+<p>###Step 5：<br>然后输入 <code>hexo s</code>或者<code>hexo server</code> 就会出现disqus的效果：<br><img src="http://img.blog.csdn.net/20160220004704154" alt="这里写图片描述"></p>
+<blockquote>
+<p>如果是默认的主题landscape，只需要在hexo主配置文件，hexo主配置文件，hexo主配置文件，说三遍，在hexo主配置文件里面添加下面白色框中的内容就可以了，</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20160220010203251" alt="这里写图片描述"></p>
+<p>#(三)添加RSS 订阅</p>
+<ul>
+<li>添加RSS 订阅很简单，已经有成熟的依赖模块可以使用，在hexo init即初始化目录输入下面的命令即可，</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed</span><br></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20160220005114375" alt="这里写图片描述"></p>
+<ul>
+<li>然后在主题的配置文件里面如下图白色框里面修改：</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160220005719042" alt="这里写图片描述"></p>
+<ul>
+<li>然后输入 <code>hexo clean</code>（即清理临时数据库），然后输入<code>hexo s</code>就可以进入页面后，点解RSS就可以看到下面的效果了。</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160220005818652" alt="这里写图片描述"></p>
+</div><div class="tags"><a href="/tags/github/">github</a><a href="/tags/hexo/">hexo</a></div><div class="post-nav"><a href="/2016/01/03/Github 搭建 hexo （三/" class="next">Github 搭建 hexo （三）<i class="icon-next"></i></a></div><div id="disqus_thread"><script>var disqus_shortname = 'absea';
+var disqus_identifier = '2016/01/04/Github 搭建 hexo （四）/';
+var disqus_title = 'Github 搭建 hexo （四）';
+var disqus_url = 'http://yoursite.com/2016/01/04/Github 搭建 hexo （四）/';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//absea.disqus.com/count.js" async></script></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search" class="search-form-input"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title">分类</div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/IOS/">IOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/NodeJS/">NodeJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github-blog/">github blog</a></li></ul></div><div class="widget"><div class="widget-title">标签</div><div class="tagcloud"><a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/Mac/" style="font-size: 15px;">Mac</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/NodeJS/" style="font-size: 15px;">NodeJS</a> <a href="/tags/安装/" style="font-size: 15px;">安装</a> <a href="/tags/IOS/" style="font-size: 15px;">IOS</a> <a href="/tags/UILabel/" style="font-size: 15px;">UILabel</a> <a href="/tags/高度计算/" style="font-size: 15px;">高度计算</a></div></div><div class="widget"><div class="widget-title">最新文章</div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/01/04/Github 搭建 hexo （四）/">Github 搭建 hexo （四）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/03/Github 搭建 hexo （三/">Github 搭建 hexo （三）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/02/Github 搭建 hexo （二） /">Github 搭建 hexo （二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/Github 搭建 hexo （一/">Github 搭建 hexo （一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/07/mac安装nodejs/">Mac安装nodejs</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/05/07/UILabel多行高度自适应计算高度存在的坑/">UILabel多行自适应计算高度存在的坑</a></li></ul></div><div class="widget"><div class="widget-title">最近评论</div><script type="text/javascript" src="//absea.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title">友情链接</div><ul></ul><a href="http://blog.csdn.net/u010053344" title="CSDN" target="_blank">CSDN</a></div></div></div></div><div id="footer">© <a href="/." rel="nofollow">ABSea.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/jquery.min.js?v=0.0.0"></script><script type="text/javascript" src="/js/totop.js?v=0.0.0"></script><script type="text/javascript" src="/js/fancybox.pack.js?v=0.0.0"></script><script type="text/javascript" src="/js/jquery.fancybox.js?v=0.0.0"></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

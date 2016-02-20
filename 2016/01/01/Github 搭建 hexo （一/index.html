@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="ABSea"><title>Github 搭建 hexo （一） | ABSea</title><link rel="stylesheet" type="text/css" href="/css/normalize.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/pure-min.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Github 搭建 hexo （一）</h1><a id="logo" href="/.">ABSea</a><p class="description">Practice makes perfect</p></div><div id="nav-menu"><a href="/." class="current"><i class="icon-home"> 首页</i></a><a href="/archives/"><i class="icon-archive"> 归档</i></a><a href="/about/"><i class="icon-about"> 关于</i></a><a href="/history/"><i class="icon-history"> 历史</i></a><a href="/guestbook/"><i class="icon-guestbook"> 留言</i></a><a href="/atom.xml"><i class="icon-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post post-page"><h1 class="post-title">Github 搭建 hexo （一）</h1><div class="post-meta">2016-01-01<span class="categories"> | 分类于<a href="/categories/github-blog/"> github blog</a></span></div><span data-disqus-identifier="2016/01/01/Github 搭建 hexo （一/" class="disqus-comment-count"></span><div class="post-content"><p>在git上做博客。<br>写个博客记录下。</p>
+<hr>
+<p>前提条件：</p>
+<ul>
+<li>电脑上配备 nodejs 环境，因为要用到nodejs的包管理器<br><a href="http://www.cnblogs.com/linjiqin/p/3765772.html" target="_blank" rel="external">npm</a>， 如果是mac或者Linux可参见本<a href="http://blog.csdn.net/u010053344/article/details/50545304" target="_blank" rel="external">安装教程</a></li>
+<li>下面有的安装命令需要root权限</li>
+<li>如果安装不上，需要用到淘宝镜像，或者开VPN</li>
+</ul>
+<hr>
+<h2 id="step_1_uFF1A"><a href="#step_1_uFF1A" class="headerlink" title="step 1："></a>step 1：</h2><ul>
+<li>进入root模式</li>
+<li>输入 <code>npm install hexo-cli -g</code></li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160218224055502" alt="安装hexo-cli"></p>
+<hr>
+<h2 id="step_2_uFF1A"><a href="#step_2_uFF1A" class="headerlink" title="step 2："></a>step 2：</h2><ul>
+<li>输入 <code>npm install  --save</code></li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160218224505800" alt="这里写图片描述"></p>
+<hr>
+<h2 id="step_3_uFF1A"><a href="#step_3_uFF1A" class="headerlink" title="step 3："></a>step 3：</h2><ul>
+<li>输入 <code>hexo init githexo</code> （githexo是个自己定义的目录）</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160218224804618" alt="hexo 初始化"></p>
+<ul>
+<li><strong>初始化后的目录结构：</strong></li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160218225002183" alt="初始化后的目录结构"></p>
+<ul>
+<li><em>_config.yml</em> ——是博客主要配置文件 </li>
+<li><em>db.json</em>——是博客数据库 </li>
+<li><em>node_modules</em>——是NodeJS依赖模块 </li>
+<li><em>source</em>——是博客内容以及其他页面（page）存在的目录，这个目录里面有个_post目录就是我们存放博客内容的地方，也就是存放博客内容markdown文档地方，输入<code>hexo new “newPage”</code>就会在这个目录建立一个名为newPage的子目录，然后在里面放入md文档，并在主题的配置文件里面添加相应栏目newPage，这样就会显示在主页面的目录上。（将在后续有所mark）</li>
+<li><em>themes</em>——是主题存放文件</li>
+</ul>
+<hr>
+<h2 id="step_4_uFF1A"><a href="#step_4_uFF1A" class="headerlink" title="step 4："></a>step 4：</h2><ul>
+<li>输入 <code>hexo server</code> 或者 <code>hexo s</code> 开启hexo博客新篇章<br><img src="http://img.blog.csdn.net/20160218230200168" alt="这里写图片描述"></li>
+</ul>
+<p>打开 <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a> 即可看到博客界面：<br><img src="http://img.blog.csdn.net/20160218230416526" alt="这里写图片描述"></p>
+<p>本此介绍采用的是默认主题 landscape。界面比较清新，代码区域也有黑色标记，值得推荐使用默认。</p>
+</div><div class="tags"><a href="/tags/github/">github</a><a href="/tags/hexo/">hexo</a></div><div class="post-nav"><a href="/2016/01/02/Github 搭建 hexo （二） /" class="pre"><i class="icon-previous">Github 搭建 hexo （二）</i></a><a href="/2015/11/07/mac安装nodejs/" class="next">Mac安装nodejs<i class="icon-next"></i></a></div><div id="disqus_thread"><script>var disqus_shortname = 'absea';
+var disqus_identifier = '2016/01/01/Github 搭建 hexo （一/';
+var disqus_title = 'Github 搭建 hexo （一）';
+var disqus_url = 'http://yoursite.com/2016/01/01/Github 搭建 hexo （一/';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//absea.disqus.com/count.js" async></script></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search" class="search-form-input"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title">分类</div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/IOS/">IOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/NodeJS/">NodeJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github-blog/">github blog</a></li></ul></div><div class="widget"><div class="widget-title">标签</div><div class="tagcloud"><a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/Mac/" style="font-size: 15px;">Mac</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/NodeJS/" style="font-size: 15px;">NodeJS</a> <a href="/tags/安装/" style="font-size: 15px;">安装</a> <a href="/tags/IOS/" style="font-size: 15px;">IOS</a> <a href="/tags/UILabel/" style="font-size: 15px;">UILabel</a> <a href="/tags/高度计算/" style="font-size: 15px;">高度计算</a></div></div><div class="widget"><div class="widget-title">最新文章</div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/01/04/Github 搭建 hexo （四）/">Github 搭建 hexo （四）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/03/Github 搭建 hexo （三/">Github 搭建 hexo （三）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/02/Github 搭建 hexo （二） /">Github 搭建 hexo （二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/Github 搭建 hexo （一/">Github 搭建 hexo （一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/07/mac安装nodejs/">Mac安装nodejs</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/05/07/UILabel多行高度自适应计算高度存在的坑/">UILabel多行自适应计算高度存在的坑</a></li></ul></div><div class="widget"><div class="widget-title">最近评论</div><script type="text/javascript" src="//absea.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title">友情链接</div><ul></ul><a href="http://blog.csdn.net/u010053344" title="CSDN" target="_blank">CSDN</a></div></div></div></div><div id="footer">© <a href="/." rel="nofollow">ABSea.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/jquery.min.js?v=0.0.0"></script><script type="text/javascript" src="/js/totop.js?v=0.0.0"></script><script type="text/javascript" src="/js/fancybox.pack.js?v=0.0.0"></script><script type="text/javascript" src="/js/jquery.fancybox.js?v=0.0.0"></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

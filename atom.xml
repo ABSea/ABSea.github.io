@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-13T15:11:22.000Z</updated>
+  <updated>2016-02-20T14:59:18.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,304 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github 搭建 hexo （四）</title>
+    <link href="http://yoursite.com/2016/01/04/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/01/04/Github 搭建 hexo （四）/</id>
+    <published>2016-01-04T14:00:00.000Z</published>
+    <updated>2016-02-20T14:59:18.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在github page 上显示hexo生成的静态博客，因为github支持的是静态博客，所以本章就在前两章的基础上，在github上显示hexo 搭建的博客。&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;声明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hexo 默认支持disqus，所以修改起来比较简单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;#(一)更换主题&lt;/p&gt;
+&lt;p&gt;本次使用的主题是一个白色风格的&lt;a href=&quot;https://github.com/tufu9441/maupassant-hexo/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;简洁主题&lt;/a&gt;，进入这个主题后就会发现其使用方法。&lt;/p&gt;
+&lt;p&gt;进入hexo 安装目录，也就是初始化的目录（hexo init  githexo）中的githexo目录，详细目录请根据自己定义的目录名字为主，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;进入该目录后，输入下面的命令：&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;接下来一定要输入下面的命令，来安装这个主题的依赖环境。&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-renderer-sass --save&amp;#10;npm install hexo-renderer-jade --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;然后就会在themes目录下多出来个主题文件夹 maupassant：&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220001304735&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;然后在根目录修改根目录中的 _config.yml 如下，将theme后面的文件名修改为maupassant,具体名字还得看自己想设置什么主题了&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220001617099&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;然后输入&lt;code&gt;hexo s&lt;/code&gt; 或者 &lt;code&gt;hexo server&lt;/code&gt; 就可以查看更换后的主题效果了，这里就不贴图展示了。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;23_28_u4E8C_29_u6DFB_u52A0disqus__u8BC4_u8BBA_u7CFB_u7EDF&quot;&gt;&lt;a href=&quot;#23_28_u4E8C_29_u6DFB_u52A0disqus__u8BC4_u8BBA_u7CFB_u7EDF&quot; class=&quot;headerlink&quot; title=&quot;#(二)添加disqus 评论系统&quot;&gt;&lt;/a&gt;#(二)添加disqus 评论系统&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;可以用到的评论系统有挺多的，多说，disqus等，这里只mark下disqus， &lt;/li&gt;
+&lt;li&gt;disqus 的添加跟主题有关，因为hexo自带disqus，所以添加起来非常简单，这里讲下默认的主题landscape 和 上面演示的主题&lt;a href=&quot;https://github.com/tufu9441/maupassant-hexo/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;maupassant&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;###Step 1：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;https://disqus.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;disqus官网&lt;/a&gt;， 点击蓝色框中链接，给自己的网站添加disqus，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220002850413&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;###Step 2：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;点击后，出现下图，输入网站名字。然后在第二个输入框填写自己的唯一disqus识别名称，这个名称会在后面用到，比如我这里填写的是我最常用的absea。然后点击&lt;strong&gt;Next&lt;/strong&gt;按钮&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220003146381&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;###Step 3：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上面点击Next后就会出现下面页面，这里面会有disqus在不同博客系统上或者其他系统上对应的代码。因为hexo自带支持disqus，所以不需要这里面的代码，这个页面的内容会在其他除hexo之外的博客系统中用到，如果是hexo搭建博客disqus，可以跳过。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220003532601&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;###Step 4：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;然后在主题的配置文件，主题的配置文件，主题的配置文件，重要的说三遍，在主题的配置文件_config.yml的disqus后面添加step 2中使用的唯一的disqus识别名字。这里我使用的是absea，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意这里absea后面和##注释必须隔开一个空格，因为.jade文件是代码风格严格的。如果没有这个空格，那就没有disqus效果。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220004055884&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;###Step 5：&lt;br&gt;然后输入 &lt;code&gt;hexo s&lt;/code&gt;或者&lt;code&gt;hexo server&lt;/code&gt; 就会出现disqus的效果：&lt;br&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220004704154&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果是默认的主题landscape，只需要在hexo主配置文件，hexo主配置文件，hexo主配置文件，说三遍，在hexo主配置文件里面添加下面白色框中的内容就可以了，&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220010203251&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;#(三)添加RSS 订阅&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加RSS 订阅很简单，已经有成熟的依赖模块可以使用，在hexo init即初始化目录输入下面的命令即可，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-feed&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220005114375&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;然后在主题的配置文件里面如下图白色框里面修改：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220005719042&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;然后输入 &lt;code&gt;hexo clean&lt;/code&gt;（即清理临时数据库），然后输入&lt;code&gt;hexo s&lt;/code&gt;就可以进入页面后，点解RSS就可以看到下面的效果了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220005818652&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在github page 上显示hexo生成的静态博客，因为github支持的是静态博客，所以本章就在前两章的基础上，在github上显示hexo 搭建的博客。&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;声明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hexo 默认支持disqu
+    
+    </summary>
+    
+      <category term="github blog" scheme="http://yoursite.com/categories/github-blog/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github 搭建 hexo （三）</title>
+    <link href="http://yoursite.com/2016/01/03/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E4%B8%89/"/>
+    <id>http://yoursite.com/2016/01/03/Github 搭建 hexo （三/</id>
+    <published>2016-01-03T12:00:00.000Z</published>
+    <updated>2016-02-20T14:59:20.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在github page 上显示hexo生成的静态博客，因为github支持的是静态博客，所以本章就在前两章的基础上，在github上显示hexo 搭建的博客。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;前提条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hexo 环境，没有请看&lt;a href=&quot;http://blog.csdn.net/u010053344/article/details/50689446&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;搭建方法&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;本地git环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_1_uFF1A&quot;&gt;&lt;a href=&quot;#step_1_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 1：&quot;&gt;&lt;/a&gt;step 1：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;进入&lt;a href=&quot;http://blog.csdn.net/u010053344/article/details/50689446&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github 搭建 hexo（一）&lt;/a&gt;中建立的目录中，输入&lt;code&gt;hexo g&lt;/code&gt;  或者 &lt;code&gt;hexo generate&lt;/code&gt; 生成静态博客，这个静态博客就在&lt;code&gt;public&lt;/code&gt;目录中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219225635310&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下图是生成的静态博客目录结构，也就是在public中的所有文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219225722392&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_2_uFF1A&quot;&gt;&lt;a href=&quot;#step_2_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 2：&quot;&gt;&lt;/a&gt;step 2：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;将上面所生成的所有的静态博客目录内容，都复制到&lt;a href=&quot;http://blog.csdn.net/u010053344/article/details/50700717&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github 搭建 hexo（二）&lt;/a&gt;中所克隆的github仓库的目录中，然后输入 &lt;code&gt;git add --all&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219225752017&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_3_uFF1A&quot;&gt;&lt;a href=&quot;#step_3_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 3：&quot;&gt;&lt;/a&gt;step 3：&lt;/h2&gt;&lt;p&gt;输入 &lt;code&gt;git commit -m &amp;quot;commit message&amp;quot;&lt;/code&gt;提交到本地仓库&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219225808204&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_4_uFF1A&quot;&gt;&lt;a href=&quot;#step_4_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 4：&quot;&gt;&lt;/a&gt;step 4：&lt;/h2&gt;&lt;p&gt;输入 &lt;code&gt;git push -u origin master&lt;/code&gt;将静态内容提交到github上的仓库中。&lt;br&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219225848861&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_5_uFF1A&quot;&gt;&lt;a href=&quot;#step_5_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 5：&quot;&gt;&lt;/a&gt;step 5：&lt;/h2&gt;&lt;p&gt;在浏览器中输入 &lt;code&gt;http://yourname.github.io/&lt;/code&gt;进入刚刚上传的静态hexo博客，然后就可以看到这样的效果。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219225915486&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;尽情享受自己的私人博客吧&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在github page 上显示hexo生成的静态博客，因为github支持的是静态博客，所以本章就在前两章的基础上，在github上显示hexo 搭建的博客。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;前提条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hexo 环境，没有请看&lt;a href=&quot;http
+    
+    </summary>
+    
+      <category term="github blog" scheme="http://yoursite.com/categories/github-blog/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github 搭建 hexo （二）</title>
+    <link href="http://yoursite.com/2016/01/02/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E4%BA%8C%EF%BC%89%20/"/>
+    <id>http://yoursite.com/2016/01/02/Github 搭建 hexo （二） /</id>
+    <published>2016-01-02T12:05:00.000Z</published>
+    <updated>2016-02-20T14:59:21.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在github page 上显示helloworld，这次不是本地效果咯。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;前提条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;github账号 &lt;/li&gt;
+&lt;li&gt;本地git环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_1_uFF1A&quot;&gt;&lt;a href=&quot;#step_1_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 1：&quot;&gt;&lt;/a&gt;step 1：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;创建一个仓库，名字以自己的github名字开头,即&lt;code&gt;yourName.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219223820618&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_2_uFF1A&quot;&gt;&lt;a href=&quot;#step_2_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 2：&quot;&gt;&lt;/a&gt;step 2：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;把上面的仓库克隆到自己的电脑一个自定义的目录，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219223047682&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_3_uFF1A&quot;&gt;&lt;a href=&quot;#step_3_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 3：&quot;&gt;&lt;/a&gt;step 3：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;进入克隆后的目录。&lt;/li&gt;
+&lt;li&gt;创建一个html文件，并写入内容。比如使用 &lt;code&gt;echo &amp;quot;hello world&amp;quot; &amp;gt; index.html&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219223108464&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_4_uFF1A&quot;&gt;&lt;a href=&quot;#step_4_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 4：&quot;&gt;&lt;/a&gt;step 4：&lt;/h2&gt;&lt;p&gt;然后commit到 github 上，使用 &lt;code&gt;git commit -m &amp;quot;commit message&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219223130496&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_5_uFF1A&quot;&gt;&lt;a href=&quot;#step_5_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 5：&quot;&gt;&lt;/a&gt;step 5：&lt;/h2&gt;&lt;p&gt;使用&lt;code&gt;git push -u origin master&lt;/code&gt;，提交到github服务器&lt;br&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160219223144980&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;这样之后就可以进入&lt;code&gt;http://yourname.github.io/&lt;/code&gt;，将yourname换成你的github名字就行了，查看helloworld的效果了，这里就不展示效果了。&lt;/strong&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在github page 上显示helloworld，这次不是本地效果咯。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;前提条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;github账号 &lt;/li&gt;
+&lt;li&gt;本地git环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_1_uFF1A&quot;&gt;&lt;a 
+    
+    </summary>
+    
+      <category term="github blog" scheme="http://yoursite.com/categories/github-blog/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github 搭建 hexo （一）</title>
+    <link href="http://yoursite.com/2016/01/01/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E4%B8%80/"/>
+    <id>http://yoursite.com/2016/01/01/Github 搭建 hexo （一/</id>
+    <published>2016-01-01T11:05:00.000Z</published>
+    <updated>2016-02-20T14:59:04.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在git上做博客。&lt;br&gt;写个博客记录下。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;前提条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电脑上配备 nodejs 环境，因为要用到nodejs的包管理器&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/linjiqin/p/3765772.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;/a&gt;， 如果是mac或者Linux可参见本&lt;a href=&quot;http://blog.csdn.net/u010053344/article/details/50545304&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;安装教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;下面有的安装命令需要root权限&lt;/li&gt;
+&lt;li&gt;如果安装不上，需要用到淘宝镜像，或者开VPN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_1_uFF1A&quot;&gt;&lt;a href=&quot;#step_1_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 1：&quot;&gt;&lt;/a&gt;step 1：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;进入root模式&lt;/li&gt;
+&lt;li&gt;输入 &lt;code&gt;npm install hexo-cli -g&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160218224055502&quot; alt=&quot;安装hexo-cli&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_2_uFF1A&quot;&gt;&lt;a href=&quot;#step_2_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 2：&quot;&gt;&lt;/a&gt;step 2：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;输入 &lt;code&gt;npm install  --save&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160218224505800&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_3_uFF1A&quot;&gt;&lt;a href=&quot;#step_3_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 3：&quot;&gt;&lt;/a&gt;step 3：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;输入 &lt;code&gt;hexo init githexo&lt;/code&gt; （githexo是个自己定义的目录）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160218224804618&quot; alt=&quot;hexo 初始化&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;初始化后的目录结构：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160218225002183&quot; alt=&quot;初始化后的目录结构&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;_config.yml&lt;/em&gt; ——是博客主要配置文件 &lt;/li&gt;
+&lt;li&gt;&lt;em&gt;db.json&lt;/em&gt;——是博客数据库 &lt;/li&gt;
+&lt;li&gt;&lt;em&gt;node_modules&lt;/em&gt;——是NodeJS依赖模块 &lt;/li&gt;
+&lt;li&gt;&lt;em&gt;source&lt;/em&gt;——是博客内容以及其他页面（page）存在的目录，这个目录里面有个_post目录就是我们存放博客内容的地方，也就是存放博客内容markdown文档地方，输入&lt;code&gt;hexo new “newPage”&lt;/code&gt;就会在这个目录建立一个名为newPage的子目录，然后在里面放入md文档，并在主题的配置文件里面添加相应栏目newPage，这样就会显示在主页面的目录上。（将在后续有所mark）&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;themes&lt;/em&gt;——是主题存放文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;step_4_uFF1A&quot;&gt;&lt;a href=&quot;#step_4_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;step 4：&quot;&gt;&lt;/a&gt;step 4：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;输入 &lt;code&gt;hexo server&lt;/code&gt; 或者 &lt;code&gt;hexo s&lt;/code&gt; 开启hexo博客新篇章&lt;br&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160218230200168&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;打开 &lt;a href=&quot;http://0.0.0.0:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://0.0.0.0:4000/&lt;/a&gt; 即可看到博客界面：&lt;br&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160218230416526&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;本此介绍采用的是默认主题 landscape。界面比较清新，代码区域也有黑色标记，值得推荐使用默认。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在git上做博客。&lt;br&gt;写个博客记录下。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;前提条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电脑上配备 nodejs 环境，因为要用到nodejs的包管理器&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/linjiqin/p/37657
+    
+    </summary>
+    
+      <category term="github blog" scheme="http://yoursite.com/categories/github-blog/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac安装nodejs</title>
