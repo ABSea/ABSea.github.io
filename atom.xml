@@ -4,9 +4,9 @@
   <subtitle>Practice makes perfect</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://absea.github.io/"/>
   <updated>2016-02-20T14:59:18.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://absea.github.io/</id>
   
   <author>
     <name>AndyChan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Github 搭建 hexo （四）</title>
-    <link href="http://yoursite.com/2016/01/04/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
-    <id>http://yoursite.com/2016/01/04/Github 搭建 hexo （四）/</id>
+    <link href="http://absea.github.io/2016/01/04/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
+    <id>http://absea.github.io/2016/01/04/Github 搭建 hexo （四）/</id>
     <published>2016-01-04T14:00:00.000Z</published>
     <updated>2016-02-20T14:59:18.000Z</updated>
     
@@ -112,19 +112,19 @@
     
     </summary>
     
-      <category term="github blog" scheme="http://yoursite.com/categories/github-blog/"/>
+      <category term="github blog" scheme="http://absea.github.io/categories/github-blog/"/>
     
     
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+      <category term="github" scheme="http://absea.github.io/tags/github/"/>
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://absea.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Github 搭建 hexo （三）</title>
-    <link href="http://yoursite.com/2016/01/03/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E4%B8%89/"/>
-    <id>http://yoursite.com/2016/01/03/Github 搭建 hexo （三/</id>
+    <link href="http://absea.github.io/2016/01/03/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E4%B8%89/"/>
+    <id>http://absea.github.io/2016/01/03/Github 搭建 hexo （三/</id>
     <published>2016-01-03T12:00:00.000Z</published>
     <updated>2016-02-20T14:59:20.000Z</updated>
     
@@ -173,19 +173,19 @@
     
     </summary>
     
-      <category term="github blog" scheme="http://yoursite.com/categories/github-blog/"/>
+      <category term="github blog" scheme="http://absea.github.io/categories/github-blog/"/>
     
     
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+      <category term="github" scheme="http://absea.github.io/tags/github/"/>
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://absea.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Github 搭建 hexo （二）</title>
-    <link href="http://yoursite.com/2016/01/02/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E4%BA%8C%EF%BC%89%20/"/>
-    <id>http://yoursite.com/2016/01/02/Github 搭建 hexo （二） /</id>
+    <link href="http://absea.github.io/2016/01/02/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E4%BA%8C%EF%BC%89%20/"/>
+    <id>http://absea.github.io/2016/01/02/Github 搭建 hexo （二） /</id>
     <published>2016-01-02T12:05:00.000Z</published>
     <updated>2016-02-20T14:59:21.000Z</updated>
     
@@ -235,19 +235,19 @@
     
     </summary>
     
-      <category term="github blog" scheme="http://yoursite.com/categories/github-blog/"/>
+      <category term="github blog" scheme="http://absea.github.io/categories/github-blog/"/>
     
     
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+      <category term="github" scheme="http://absea.github.io/tags/github/"/>
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://absea.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Github 搭建 hexo （一）</title>
-    <link href="http://yoursite.com/2016/01/01/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E4%B8%80/"/>
-    <id>http://yoursite.com/2016/01/01/Github 搭建 hexo （一/</id>
+    <link href="http://absea.github.io/2016/01/01/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E4%B8%80/"/>
+    <id>http://absea.github.io/2016/01/01/Github 搭建 hexo （一/</id>
     <published>2016-01-01T11:05:00.000Z</published>
     <updated>2016-02-20T14:59:04.000Z</updated>
     
@@ -304,19 +304,19 @@
     
     </summary>
     
-      <category term="github blog" scheme="http://yoursite.com/categories/github-blog/"/>
+      <category term="github blog" scheme="http://absea.github.io/categories/github-blog/"/>
     
     
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+      <category term="github" scheme="http://absea.github.io/tags/github/"/>
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://absea.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Mac安装nodejs</title>
-    <link href="http://yoursite.com/2015/11/07/mac%E5%AE%89%E8%A3%85nodejs/"/>
-    <id>http://yoursite.com/2015/11/07/mac安装nodejs/</id>
+    <link href="http://absea.github.io/2015/11/07/mac%E5%AE%89%E8%A3%85nodejs/"/>
+    <id>http://absea.github.io/2015/11/07/mac安装nodejs/</id>
     <published>2015-11-07T14:44:12.000Z</published>
     <updated>2016-02-13T15:11:22.000Z</updated>
     
@@ -360,23 +360,23 @@
     
     </summary>
     
-      <category term="NodeJS" scheme="http://yoursite.com/categories/NodeJS/"/>
+      <category term="NodeJS" scheme="http://absea.github.io/categories/NodeJS/"/>
     
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://absea.github.io/tags/Linux/"/>
     
-      <category term="Mac" scheme="http://yoursite.com/tags/Mac/"/>
+      <category term="Mac" scheme="http://absea.github.io/tags/Mac/"/>
     
-      <category term="NodeJS" scheme="http://yoursite.com/tags/NodeJS/"/>
+      <category term="NodeJS" scheme="http://absea.github.io/tags/NodeJS/"/>
     
-      <category term="安装" scheme="http://yoursite.com/tags/%E5%AE%89%E8%A3%85/"/>
+      <category term="安装" scheme="http://absea.github.io/tags/%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
   <entry>
     <title>UILabel多行自适应计算高度存在的坑</title>
-    <link href="http://yoursite.com/2015/05/07/UILabel%E5%A4%9A%E8%A1%8C%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E8%AE%A1%E7%AE%97%E9%AB%98%E5%BA%A6%E5%AD%98%E5%9C%A8%E7%9A%84%E5%9D%91/"/>
-    <id>http://yoursite.com/2015/05/07/UILabel多行高度自适应计算高度存在的坑/</id>
+    <link href="http://absea.github.io/2015/05/07/UILabel%E5%A4%9A%E8%A1%8C%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E8%AE%A1%E7%AE%97%E9%AB%98%E5%BA%A6%E5%AD%98%E5%9C%A8%E7%9A%84%E5%9D%91/"/>
+    <id>http://absea.github.io/2015/05/07/UILabel多行高度自适应计算高度存在的坑/</id>
     <published>2015-05-07T10:44:12.000Z</published>
     <updated>2016-02-13T13:41:28.000Z</updated>
     
@@ -427,14 +427,14 @@
     
     </summary>
     
-      <category term="IOS" scheme="http://yoursite.com/categories/IOS/"/>
+      <category term="IOS" scheme="http://absea.github.io/categories/IOS/"/>
     
     
-      <category term="IOS" scheme="http://yoursite.com/tags/IOS/"/>
+      <category term="IOS" scheme="http://absea.github.io/tags/IOS/"/>
     
-      <category term="UILabel" scheme="http://yoursite.com/tags/UILabel/"/>
+      <category term="UILabel" scheme="http://absea.github.io/tags/UILabel/"/>
     
-      <category term="高度计算" scheme="http://yoursite.com/tags/%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97/"/>
+      <category term="高度计算" scheme="http://absea.github.io/tags/%E9%AB%98%E5%BA%A6%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
