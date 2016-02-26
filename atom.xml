@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://absea.github.io/"/>
-  <updated>2016-02-20T14:59:18.000Z</updated>
+  <updated>2016-02-26T14:25:52.000Z</updated>
   <id>http://absea.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://absea.github.io/2016/01/04/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
     <id>http://absea.github.io/2016/01/04/Github 搭建 hexo （四）/</id>
     <published>2016-01-04T14:00:00.000Z</published>
-    <updated>2016-02-20T14:59:18.000Z</updated>
+    <updated>2016-02-26T14:25:52.000Z</updated>
     
     <content type="html">&lt;p&gt;在github page 上显示hexo生成的静态博客，因为github支持的是静态博客，所以本章就在前两章的基础上，在github上显示hexo 搭建的博客。&lt;/p&gt;
 &lt;hr&gt;
@@ -57,8 +57,7 @@
 &lt;li&gt;disqus 的添加跟主题有关，因为hexo自带disqus，所以添加起来非常简单，这里讲下默认的主题landscape 和 上面演示的主题&lt;a href=&quot;https://github.com/tufu9441/maupassant-hexo/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;maupassant&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;###Step 1：&lt;/p&gt;
-&lt;ul&gt;
+&lt;h3 id=&quot;Step_1_uFF1A&quot;&gt;&lt;a href=&quot;#Step_1_uFF1A&quot; class=&quot;headerlink&quot; title=&quot;Step 1：&quot;&gt;&lt;/a&gt;Step 1：&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;进入&lt;a href=&quot;https://disqus.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;disqus官网&lt;/a&gt;， 点击蓝色框中链接，给自己的网站添加disqus，&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220002850413&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
@@ -99,6 +98,14 @@
 &lt;li&gt;然后输入 &lt;code&gt;hexo clean&lt;/code&gt;（即清理临时数据库），然后输入&lt;code&gt;hexo s&lt;/code&gt;就可以进入页面后，点解RSS就可以看到下面的效果了。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160220005818652&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;#RSS还有个关键的一步：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在主配置文件里面的URL一定要更改，不然RSS订阅不会成功，见下图白色框框中，这里填写自己网站地址即可：&lt;br&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160226221343160&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然后提交到github上后，点击rss 订阅就会成功。就是下图这样的效果，不会提交可以参见本博客系列的其他mark记录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160226221715209&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">

@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://absea.github.io/2016/01/04/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E5%9B%9B%EF%BC%89/</loc>
+    <lastmod>2016-02-26T14:25:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>Github 搭建 hexo （四）</title>
+        <pubTime>2016-01-04T14:00:00.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="github blog" url="http://absea.github.io/categories/github-blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://absea.github.io/2016/01/02/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E4%BA%8C%EF%BC%89%20/</loc>
     <lastmod>2016-02-20T14:59:21.000Z</lastmod>
     <data>
@@ -32,28 +54,6 @@
         <display>
         <title>Github 搭建 hexo （三）</title>
         <pubTime>2016-01-03T12:00:00.000Z</pubTime>
-        
-        <tag>github</tag>
-         
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="github blog" url="http://absea.github.io/categories/github-blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://absea.github.io/2016/01/04/Github%20%E6%90%AD%E5%BB%BA%20hexo%20%EF%BC%88%E5%9B%9B%EF%BC%89/</loc>
-    <lastmod>2016-02-20T14:59:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>Github 搭建 hexo （四）</title>
-        <pubTime>2016-01-04T14:00:00.000Z</pubTime>
         
         <tag>github</tag>
          
